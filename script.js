@@ -5,8 +5,8 @@ function curry(callback) {
 	  }else{
 		  return (...moreArgs) => curriedFn(...args, ...moreArgs);
 	  }
-	  return curriedFn;
   }
+	return curriedFn;
 }
 
 module.export=curry
