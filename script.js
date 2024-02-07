@@ -9,11 +9,12 @@ function curry(callback) {
             return curriedFn;
         }
 
-        // Sample usage
-        const sum = (...numbers) => numbers.reduce((total, number) => total + number, 0);
-        const curriedSum = curry(sum);
+        document.addEventListener('DOMContentLoaded', function() {
+            const sum = (...numbers) => numbers.reduce((total, number) => total + number, 0);
+            const curriedSum = curry(sum);
 
-        document.getElementById('btn').addEventListener('click', function() {
-            const result = curriedSum(1)(2)(3)();
-            document.getElementById('output').textContent = `Result: ${result}`;
+            document.getElementById('btn').addEventListener('click', function() {
+                const result = curriedSum(1)(2)(3)();
+                document.getElementById('output').textContent = `Result: ${result}`;
+            });
         });
